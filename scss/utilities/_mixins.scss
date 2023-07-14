@@ -1,0 +1,107 @@
+@mixin flexcentered() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin set-font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@function text-resize-giant-based($giantValue, $fs: _giant) {
+  $fs-giant: $giantValue;
+
+  @if ($fs == _enormous) {
+    $fs-enormous: $fs-giant / 1.3;
+    @return $fs-enormous;
+  }
+  @if ($fs == _large) {
+    $fs-large: $fs-giant / 2.6;
+    @return $fs-large;
+  }
+
+  @if ($fs == s_large) {
+    $fs-semi-large: $fs-giant / 3.2;
+    @return $fs-semi-large;
+  }
+
+  @if ($fs == _regular) {
+    $fs-regular: $fs-giant / 4;
+    @return $fs-regular;
+  }
+
+  @if ($fs == s_regular) {
+    $fs-semi-regular: $fs-giant / 4.6;
+    @return $fs-semi-regular;
+  }
+
+  @return $fs-giant;
+}
+
+@mixin center-element() {
+  align-self: center;
+  justify-self: center;
+}
+
+@mixin remove-lineBreak() {
+  br {
+    content: "";
+    display: none;
+  }
+
+  br:after {
+    content: "";
+    display: none;
+  }
+}
+
+@mixin place-bid {
+  color: $btn-bid-txtColor;
+  border: 1px solid $color1;
+  border-radius: $border-radius1;
+  background: $color5;
+}
+
+@function max($number1, $number2) {
+  @return if($number1 > $number2, $number1, $number2);
+}
+
+@function min($number1, $number2) {
+  @return if($number1 < $number2, $number1, $number2);
+}
+// ==========================================================================
+// =========          Media Queries         ==========
+// ==========================================================================
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == xxl) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xl) {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+}

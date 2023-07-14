@@ -1,0 +1,13 @@
+font-size:
+  - semi-regular: 16
+  - regular: 18
+  - semi-large: 22
+  - large: 24
+  - big: 36
+  - giant: 48
+font-family:
+  - primary: Muli
+font-weight:
+  - semi-bold: 300
+  - bold: 400
+  - very-bold: 700
