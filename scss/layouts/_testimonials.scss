@@ -1,0 +1,78 @@
+.testimonials {
+  width: 100%;
+  @include flexcentered;
+  flex-direction: column;
+  gap: 3rem;
+  &-container {
+    width: $section-width;
+    background: $color1;
+    border-radius: $border-radius2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 3rem;
+
+    padding: 3rem;
+  }
+  &-title {
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: fit-content;
+    @include center-element;
+  }
+
+  &-author {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    height: fit-content;
+    @include center-element;
+
+    &__picture {
+      width: 8rem;
+      height: 8rem;
+      overflow: hidden;
+      border-radius: 100%;
+      border: 3px solid $color3;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-testimonial {
+    grid-column: 2;
+    grid-row: 2;
+    width: fit-content;
+    height: fit-content;
+    @include center-element;
+  }
+
+  &-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .dots {
+      display: flex;
+
+      gap: 1rem;
+      .dot {
+        width: 0.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        background: $color1;
+        opacity: 0.4;
+      }
+
+      .dot.active {
+        background: $color1;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.testimonials {
+  &-title {
+    color: $txt-title-secondary;
+  }
+  &-title::after {
+    border-color: $txt-title-secondary;
+  }
+
+  &-author__details {
+    h1 {
+      @include set-font($fs-semi-large, $fw-bold);
+      color: $txt-title-secondary;
+    }
+
+    h2 {
+      @include set-font($fs-regular, $fw-semi-bold);
+      color: $txt-title-secondary;
+    }
+  }
+
+  &-testimonial {
+    color: $txt-title-secondary;
+  }
+}

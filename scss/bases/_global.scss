@@ -7,7 +7,7 @@ body {
 .container {
   @include flexcentered;
   margin-top: 3rem;
-  gap: 3rem;
+  gap: 10rem;
   flex-direction: column;
   width: 100%;
 }
