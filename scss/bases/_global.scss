@@ -11,3 +11,27 @@ body {
   flex-direction: column;
   width: 100%;
 }
+
+.section-title {
+  position: relative;
+  display: inline;
+}
+
+.section-title__lefted::after {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  border-bottom: 3px solid $color2;
+  inset: 0;
+  bottom: -30%;
+}
+.section-title__centered::after {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  border-bottom: 3px solid $color2;
+  inset: 0;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+}

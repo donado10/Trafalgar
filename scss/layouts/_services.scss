@@ -1,0 +1,45 @@
+.services {
+  width: $section-width;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, auto);
+
+  row-gap: 3rem;
+
+  &-title {
+    grid-row: 1;
+    width: fit-content;
+    @include center-element;
+  }
+  &-description {
+    grid-row: 2;
+    text-align: center;
+  }
+
+  &-cards {
+    grid-row: 3;
+    @include flexcentered;
+    gap: 2rem;
+
+    flex-wrap: wrap;
+    &__card {
+      width: 20rem;
+      height: 20rem;
+      border-radius: $border-radius2;
+      box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+
+      &-image {
+        height: 8rem;
+      }
+    }
+
+    &__card > * {
+      padding: 1rem;
+    }
+  }
+
+  &-cta {
+    grid-row: 4;
+    @include center-element;
+  }
+}

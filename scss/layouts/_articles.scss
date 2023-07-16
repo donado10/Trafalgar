@@ -1,0 +1,45 @@
+.articles {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 3rem;
+  &-title {
+    grid-row: 1;
+    width: fit-content;
+    @include center-element;
+  }
+  &-cards {
+    grid-row: 2;
+    @include flexcentered;
+    flex-wrap: wrap;
+    gap: 1rem;
+    &__card {
+      width: 22rem;
+      height: 32rem;
+      border-radius: $border-radius2;
+      box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+      overflow: hidden;
+      &-image {
+        height: 15rem;
+      }
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      &-link:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__card > *:not(&__card-image) {
+      padding: 1rem;
+    }
+  }
+
+  &-cta {
+    grid-row: 3;
+    @include center-element;
+  }
+}

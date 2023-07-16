@@ -1,0 +1,34 @@
+.providers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  width: $section-width;
+
+  row-gap: 3rem;
+  column-gap: 8rem;
+
+  &-image {
+    grid-column: 1;
+    grid-row: 1/-1;
+    img {
+      width: 100%;
+      aspect-ratio: 1.3/1;
+    }
+  }
+
+  &-title {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  &-description {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  &-cta {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
