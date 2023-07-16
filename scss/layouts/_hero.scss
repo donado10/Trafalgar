@@ -1,0 +1,32 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  row-gap: 2rem;
+  width: $section-width;
+
+  &-title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  &-description {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  &-cta {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  &-image {
+    grid-column: 2;
+    grid-row: 1/-1;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1.15/1;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.section-title {
+  color: $txt-title-primary;
+}
+
+.section-description {
+  color: $txt-description-primary;
+}
+
+.section-primary-cta > * {
+  color: $btn-primary-txtColor;
+  @include set-font($fs-regular, $fw-very-bold);
+}

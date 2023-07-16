@@ -1,0 +1,9 @@
+.hero {
+  &-title {
+    @include set-font($fs-giant, $fw-very-bold);
+  }
+
+  &-description {
+    @include set-font($fs-semi-large, $fw-semi-bold);
+  }
+}

@@ -6,6 +6,7 @@ $color1: #458ff6;
 $color2: #000000;
 $color3: #ffffff;
 $color4: #7d7987;
+$color5: #233348;
 
 // ---- Buttons ----
 $btn-primary-bgColor: $color1;
@@ -14,12 +15,22 @@ $btn-secondary-bgColor: $color3;
 $btn-secondary-borderColor: $color1;
 $btn-secondary-txtColor: $color1;
 
-// ---- Texts-description ----
+// ---- TEXT ----
+//--- TEXT-Links ---
+$txt-link-primary: $color4;
+$txt-link-highlightColor: $color5;
 
-$txt-defaultColor: $color2;
-$txt-highlightColor: $color1;
-$txt-thirdColor: $color3;
-$txt-fourthColor: $color4;
+//--- TEXT-logo ---
+$txt-logo-primary: $color5;
+$txt-logo-secondary: $color3;
+
+//--- TEXT-title ---
+$txt-title-primary: $color2;
+$txt-title-secondary: $color3;
+
+//--- TEXT-description ---
+$txt-description-primary: $color4;
+$txt-description-secondary: $color3;
 
 // ==========================================================================
 // =========          Font-family Variables        ==========
@@ -51,14 +62,15 @@ $fw-very-bold: 700;
 // ==========================================================================
 
 $spacing-margin: 3rem;
+$section-width: 85%;
 
 // ==========================================================================
 // =========          Others         ==========
 // ==========================================================================
 
 $border-radius1: 8px;
-$border-radius2: 16px;
-$border-radius3: 28px;
+$border-radius2: 20px;
+$border-radius3: 55px;
 
 // ==========================================================================
 // =========          Media Queries        ==========
