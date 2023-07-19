@@ -56,6 +56,11 @@
   }
 }
 
+@mixin fit-content {
+  width: fit-content;
+  height: fit-content;
+}
+
 @mixin place-bid {
   color: $btn-bid-txtColor;
   border: 1px solid $color1;

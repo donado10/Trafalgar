@@ -3,9 +3,9 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
-
   row-gap: 3rem;
 
+  position: relative;
   &-title {
     grid-row: 1;
     width: fit-content;
@@ -27,7 +27,7 @@
       height: 20rem;
       border-radius: $border-radius2;
       box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
-
+      background: $color3;
       &-image {
         height: 8rem;
       }
@@ -41,5 +41,47 @@
   &-cta {
     grid-row: 4;
     @include center-element;
+  }
+
+  .vector {
+    position: absolute;
+    top: 46%;
+    right: 6%;
+    z-index: -1;
+  }
+
+  .vector-background {
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    left: -10%;
+    width: 60%;
+    img {
+      width: 100%;
+      aspect-ratio: 1.4/1;
+    }
+  }
+
+  // ==========================================================================
+  // =========          Typography         ==========
+  // ==========================================================================
+
+  // ==========================================================================
+  // =========          Media queries         ==========
+  // ==========================================================================
+  @include response(lg) {
+    .services-cards__card {
+      width: 17rem;
+      height: 17rem;
+
+      &-image {
+        height: 8rem;
+        @include fit-content;
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }

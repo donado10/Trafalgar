@@ -10,28 +10,23 @@ body {
   gap: 10rem;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 }
 
-.section-title {
-  position: relative;
-  display: inline;
+.neutral {
+  display: none;
 }
 
-.section-title__lefted::after {
-  position: absolute;
-  content: "";
-  width: 3.5rem;
-  border-bottom: 3px solid $color2;
+.neutral.show {
+  position: fixed;
   inset: 0;
-  bottom: -30%;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
 }
-.section-title__centered::after {
-  position: absolute;
-  content: "";
-  width: 3.5rem;
-  border-bottom: 3px solid $color2;
-  inset: 0;
-  bottom: -30%;
-  left: 50%;
-  transform: translateX(-50%);
+
+@include response(xl) {
+  .container {
+    gap: 5rem;
+  }
 }

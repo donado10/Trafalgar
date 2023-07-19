@@ -2,6 +2,20 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   row-gap: 3rem;
+  position: relative;
+  &-vector {
+    position: absolute;
+    z-index: -1;
+    top: 7%;
+    left: -5%;
+  }
+
+  &-background-vector {
+    position: absolute;
+    z-index: -1;
+
+    right: -25%;
+  }
   &-title {
     grid-row: 1;
     width: fit-content;
@@ -13,14 +27,12 @@
     flex-wrap: wrap;
     gap: 1rem;
     &__card {
-      width: 22rem;
+      width: 21rem;
       height: 32rem;
       border-radius: $border-radius2;
       box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
       overflow: hidden;
-      &-image {
-        height: 15rem;
-      }
+      background: $color3;
 
       &-link {
         display: flex;
@@ -41,5 +53,16 @@
   &-cta {
     grid-row: 3;
     @include center-element;
+  }
+
+  // ==========================================================================
+  // =========          Typography        ==========
+  // ==========================================================================
+  .articles {
+    &-cards__card-link {
+      span {
+        color: $color1;
+      }
+    }
   }
 }

@@ -1,0 +1,47 @@
+// ==========================================================================
+// =========          Typography         ==========
+// ==========================================================================
+
+.section-description {
+  @include set-font($fs-regular, $fw-semi-bold);
+}
+
+.card-description {
+  color: $txt-description-primary;
+  @include set-font($fs-semi-regular, $fw-semi-bold);
+}
+
+.section-description__primary {
+  color: $txt-description-primary;
+}
+.section-description__secondary {
+  color: $txt-description-secondary;
+}
+// ==========================================================================
+// =========          Media queries         ==========
+// ==========================================================================
+
+@include response(xxl) {
+  $fs-regular: 1rem;
+
+  .section-description {
+    @include set-font($fs-regular, $fw-semi-bold);
+  }
+}
+@include response(xl) {
+  $fs-regular: 0.75rem;
+
+  .section-description {
+    @include set-font($fs-regular, $fw-semi-bold);
+  }
+}
+@include response(lg) {
+  .section-description {
+    @include remove-lineBreak;
+  }
+
+  .card-description {
+    $fs-semi-regular: 0.875rem;
+    @include set-font($fs-semi-regular, $fw-semi-bold);
+  }
+}

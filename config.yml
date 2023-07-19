@@ -6,7 +6,7 @@ font-size:
   - big: 36
   - giant: 48
 font-family:
-  - primary: Muli
+  - primary: "Muli"
 font-weight:
   - semi-bold: 300
   - bold: 400

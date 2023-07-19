@@ -11,21 +11,17 @@
 @import "bases/reset";
 @import "bases/global";
 
-@import "bases/Typography/tGlobal";
-@import "bases/Typography/tHeader";
-@import "bases/Typography/tHero";
-@import "bases/Typography/tServices";
-@import "bases/Typography/tApp";
-@import "bases/Typography/tTestimonials";
-
-@import "bases/Typography/tArticles";
-@import "bases/Typography/tFooter";
-
 // ==========================================================================
 // =========          Components         ==========
 // ==========================================================================
 
+@import "components/background";
+@import "components/titles";
+@import "components/description";
+@import "components/links";
+@import "components/images";
 @import "components/buttons";
+
 // ==========================================================================
 // =========          Layouts         ==========
 // ==========================================================================

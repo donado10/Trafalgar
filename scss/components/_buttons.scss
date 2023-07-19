@@ -1,7 +1,11 @@
 .section-primary-cta {
+  background: $btn-primary-bgColor;
+}
+
+.section-primary-cta,
+.section-secondary-cta {
   width: 12.5rem;
   height: 3.5rem;
-  background: $btn-primary-bgColor;
   border-radius: $border-radius3;
   @include flexcentered;
 
@@ -14,17 +18,47 @@
 }
 
 .section-secondary-cta {
-  width: 12.5rem;
-  height: 3.5rem;
   background: $btn-secondary-bgColor;
   border: 2px solid $btn-secondary-borderColor;
-  border-radius: $border-radius3;
-  @include flexcentered;
+}
 
-  a {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    @include flexcentered;
+// ==========================================================================
+// =========          Typography         ==========
+// ==========================================================================
+
+.section-primary-cta,
+.section-secondary-cta {
+  @include set-font($fs-regular, $fw-very-bold);
+}
+.section-primary-cta > * {
+  color: $btn-primary-txtColor;
+}
+
+.section-secondary-cta > * {
+  color: $btn-secondary-txtColor;
+}
+
+// ==========================================================================
+// =========          Media queries        ==========
+// ==========================================================================
+
+@include response(xxl) {
+  $fs-regular: 0.875rem;
+
+  .section-primary-cta,
+  .section-secondary-cta {
+    width: 8.5rem;
+    height: 3rem;
+    @include set-font($fs-regular, $fw-very-bold);
+  }
+}
+@include response(xl) {
+  $fs-regular: 0.875rem;
+
+  .section-primary-cta,
+  .section-secondary-cta {
+    width: 8.5rem;
+    height: 3rem;
+    @include set-font($fs-regular, $fw-very-bold);
   }
 }

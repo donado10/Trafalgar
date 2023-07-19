@@ -11,6 +11,7 @@
     <title>Trafalgar</title>
   </head>
   <body>
+    <div class="neutral"></div>
     <div class="container">
       <header class="header">
         <div class="header-logo">
@@ -19,22 +20,43 @@
         </div>
         <nav>
           <ul class="header-nav">
-            <li class="header-nav__link"><a href="#">Home</a></li>
-            <li class="header-nav__link"><a href="#">Find a doctor</a></li>
-            <li class="header-nav__link"><a href="#">Apps</a></li>
-            <li class="header-nav__link"><a href="#">Testimonials</a></li>
-            <li class="header-nav__link"><a href="#">About us</a></li>
+            <li class="header-nav__link nav-link nav-link__primary">
+              <a href="#">Home</a>
+            </li>
+            <li class="header-nav__link nav-link nav-link__primary">
+              <a href="#">Find a doctor</a>
+            </li>
+            <li class="header-nav__link nav-link nav-link__primary">
+              <a href="#">Apps</a>
+            </li>
+            <li class="header-nav__link nav-link nav-link__primary">
+              <a href="#">Testimonials</a>
+            </li>
+            <li class="header-nav__link nav-link nav-link__primary">
+              <a href="#">About us</a>
+            </li>
+            <li class="header-nav__close">
+              <img src="img/header/close.svg" alt="close trafalgar" />
+            </li>
           </ul>
         </nav>
+        <div class="header-menu">
+          <img src="img/header/menu.svg" alt="menu trafalgar" />
+        </div>
       </header>
 
       <section class="hero">
-        <h1 class="hero-title section-title">
+        <div class="vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
+        <h1 class="hero-title section-title section-title__primary">
           Virtual healthcare <br />
           for you
         </h1>
 
-        <p class="hero-description section-description">
+        <p
+          class="hero-description section-description section-description__primary"
+        >
           Trafalgar provides progressive, and affordable <br />healthcare,
           accessible on mobile and online <br />
           for everyone
@@ -52,10 +74,20 @@
       </section>
 
       <section class="services">
-        <h1 class="services-title section-title section-title__centered">
+        <div class="vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
+        <div class="vector-background">
+          <img src="img/services/vector.svg" alt="vector trafalgar" />
+        </div>
+        <h1
+          class="services-title section-title section-title__primary section-title__centered"
+        >
           Our services
         </h1>
-        <p class="services-description section-description">
+        <p
+          class="services-description section-description section-description__primary"
+        >
           We provide to you the best choiches for you. Adjust it to your health
           needs and make sure your undergo treatment <br />
           with our highly qualified doctors you can consult with us which type
@@ -151,16 +183,23 @@
       </section>
 
       <section class="providers">
+        <div class="vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
         <div class="providers-image">
           <img src="img/providers/image.png" alt="trafalgar illustration" />
         </div>
 
-        <h1 class="providers-title section-title section-title__lefted">
+        <h1
+          class="providers-title section-title section-title__primary section-title__lefted"
+        >
           Leading healthcare <br />
           providers
         </h1>
 
-        <p class="providers-description section-description">
+        <p
+          class="providers-description section-description section-description__primary"
+        >
           Trafalgar provides progressive, and affordable <br />healthcare,
           accessible on mobile and online for <br />
           everyone. To us, it’s not just work. We take pride <br />in the
@@ -175,12 +214,16 @@
       </section>
 
       <section class="app">
-        <h1 class="app-title section-title section-title__lefted">
+        <h1
+          class="app-title section-title section-title__primary section-title__lefted"
+        >
           Download our <br />
           mobile apps
         </h1>
 
-        <p class="app-description section-description">
+        <p
+          class="app-description section-description section-description__primary"
+        >
           Our dedicated patient engagement app and <br />
           web portal allow you to access information <br />
           instantaneously (no tedeous form, long calls, <br />
@@ -199,25 +242,35 @@
       </section>
 
       <section class="testimonials">
+        <div class="testimonials-vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
         <div class="testimonials-container">
-          <h1 class="testimonials-title section-title section-title__centered">
+          <div class="vector">
+            <img src="img/global/element.svg" alt="element trafalgar" />
+          </div>
+          <h1
+            class="testimonials-title section-title section-title__secondary section-title__centered"
+          >
             What our customer are saying
           </h1>
-          <div class="testimonials-author">
-            <div class="testimonials-author__picture">
-              <img src="img/testimonials/image1.png" alt="author picture" />
-            </div>
-            <div class="testimonials-author__details">
-              <h1 class="name">Edward Newgate</h1>
-              <h2 class="company">Founder Circle</h2>
-            </div>
-          </div>
-          <p class="testimonials-testimonial">
-            “Our dedicated patient engagement app and <br />
-            web portal allow you to access information <br />
-            instantaneously (no tedeous form, long calls, <br />
-            or administrative hassle) and securely”
-          </p>
+          <ul class="testimonials-list">
+            <li class="testimonials-author active">
+              <div class="testimonials-author__picture">
+                <img src="img/testimonials/image1.png" alt="author picture" />
+              </div>
+              <div class="testimonials-author__details">
+                <h1 class="name">Edward Newgate</h1>
+                <h2 class="company">Founder Circle</h2>
+              </div>
+              <p class="testimonials-author__testimonial">
+                “Our dedicated patient engagement app and <br />
+                web portal allow you to access information <br />
+                instantaneously (no tedeous form, long calls, <br />
+                or administrative hassle) and securely”
+              </p>
+            </li>
+          </ul>
         </div>
         <div class="testimonials-slider">
           <div class="left-arrow">
@@ -264,6 +317,12 @@
       </section>
 
       <section class="articles">
+        <div class="articles-background-vector">
+          <img src="img/articles/bg_vector.svg" alt="bg trafalgar" />
+        </div>
+        <div class="articles-vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
         <h1 class="articles-title section-title section-title__centered">
           Check out our latest article
         </h1>
@@ -348,13 +407,21 @@
       </section>
 
       <footer class="footer">
+        <div class="footer-vector">
+          <img src="img/global/element.svg" alt="element trafalgar" />
+        </div>
         <div class="footer-container">
-          <div class="footer-detail">
+          <div class="container-vector">
+            <img src="img/global/element.svg" alt="element trafalgar" />
+          </div>
+          <div class="footer-left-wrapper">
             <div class="footer-logo">
               <div class="footer-logo__logo"><span>T</span></div>
               <h1 class="footer-logo__text">Trafalgar</h1>
             </div>
-            <p class="footer-description">
+            <p
+              class="footer-description section-description section-description__secondary"
+            >
               Trafalgar provides progressive, and affordable <br />
               healthcare, accessible on mobile and online <br />
               for everyone
@@ -365,32 +432,56 @@
             </p>
           </div>
 
-          <div class="footer-links-groups">
-            <nav class="group-link">
-              <h1 class="group-link__title">Company</h1>
-              <ul class="group-link__links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Find a doctor</a></li>
-                <li><a href="#">Apps</a></li>
+          <div class="footer-link-list">
+            <nav class="link-list">
+              <h1 class="link-list__title">Company</h1>
+              <ul class="link-list__links">
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">About</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Testimonials</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Find a doctor</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Apps</a>
+                </li>
               </ul>
             </nav>
-            <nav class="group-link">
-              <h1 class="group-link__title">Region</h1>
-              <ul class="group-link__links">
-                <li><a href="#">Indonesia</a></li>
-                <li><a href="#">Singapore</a></li>
-                <li><a href="#">Hongkong</a></li>
-                <li><a href="#">Canada</a></li>
+            <nav class="link-list">
+              <h1 class="link-list__title">Region</h1>
+              <ul class="link-list__links">
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Indonesia</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Singapore</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Hongkong</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Canada</a>
+                </li>
               </ul>
             </nav>
-            <nav class="group-link">
-              <h1 class="group-link__title">Help</h1>
-              <ul class="group-link__links">
-                <li><a href="#">Help center</a></li>
-                <li><a href="#">Contact support</a></li>
-                <li><a href="#">Instruction</a></li>
-                <li><a href="#">How it works</a></li>
+            <nav class="link-list">
+              <h1 class="link-list__title">Help</h1>
+              <ul class="link-list__links">
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Help center</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Contact support</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">Instruction</a>
+                </li>
+                <li class="nav-link nav-link__secondary">
+                  <a href="#">How it works</a>
+                </li>
               </ul>
             </nav>
           </div>

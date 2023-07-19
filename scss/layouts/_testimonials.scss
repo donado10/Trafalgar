@@ -1,19 +1,35 @@
 .testimonials {
   width: 100%;
+
   @include flexcentered;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
+
+  &-vector {
+    position: absolute;
+    bottom: 20%;
+    left: 4%;
+  }
   &-container {
     width: $section-width;
     background: $color1;
     border-radius: $border-radius2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
     row-gap: 3rem;
-
+    height: 25rem;
     padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    .vector {
+      position: absolute;
+      top: 1%;
+      right: -4%;
+    }
   }
+
   &-title {
     grid-column: 1/-1;
     grid-row: 1;
@@ -21,35 +37,42 @@
     @include center-element;
   }
 
-  &-author {
+  &-list {
     grid-column: 1;
     grid-row: 2;
+    position: relative;
 
+    & > li.hidden {
+      display: none;
+    }
+  }
+
+  &-author {
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 2rem;
     width: fit-content;
     height: fit-content;
+    inset: 0;
+    margin: auto;
     @include center-element;
 
     &__picture {
-      width: 8rem;
-      height: 8rem;
       overflow: hidden;
       border-radius: 100%;
       border: 3px solid $color3;
-      img {
-        width: 100%;
-      }
     }
-  }
 
-  &-testimonial {
-    grid-column: 2;
-    grid-row: 2;
-    width: fit-content;
-    height: fit-content;
-    @include center-element;
+    &__details {
+      margin-right: 10rem;
+    }
+
+    &__testimonial {
+      width: fit-content;
+      height: fit-content;
+      @include center-element;
+    }
   }
 
   &-slider {
@@ -73,6 +96,99 @@
         background: $color1;
         opacity: 1;
       }
+    }
+  }
+
+  // ==========================================================================
+  // =========          Typography         ==========
+  // ==========================================================================
+
+  &-title {
+    color: $txt-title-secondary;
+  }
+  &-title::after {
+    border-color: $txt-title-secondary;
+  }
+
+  &-author__details {
+    h1 {
+      @include set-font($fs-semi-large, $fw-bold);
+      color: $txt-title-secondary;
+    }
+
+    h2 {
+      @include set-font($fs-regular, $fw-semi-bold);
+      color: $txt-title-secondary;
+    }
+  }
+
+  &-author__testimonial {
+    color: $txt-title-secondary;
+  }
+
+  // ==========================================================================
+  // =========          Media queries         ==========
+  // ==========================================================================
+
+  @include response(xxl) {
+    .testimonials-author__details {
+      margin-right: 10rem;
+    }
+
+    //---typography
+
+    $fs-regular: 1rem;
+    $fs-semi-large: 1.125rem;
+    &-author__details {
+      h1 {
+        @include set-font($fs-semi-large, $fw-bold);
+        color: $txt-title-secondary;
+      }
+
+      h2 {
+        @include set-font($fs-regular, $fw-semi-bold);
+        color: $txt-title-secondary;
+      }
+    }
+
+    &-author__testimonial {
+      color: $txt-title-secondary;
+      @include set-font($fs-regular, $fw-semi-bold);
+    }
+  }
+
+  @include response(xl) {
+    &-container {
+      height: auto;
+    }
+
+    &-author {
+      flex-direction: column;
+      position: static;
+    }
+    .testimonials-author__details {
+      margin-right: 0rem;
+    }
+
+    //---typography
+
+    $fs-regular: 0.875rem;
+    $fs-semi-large: 1rem;
+    &-author__details {
+      h1 {
+        @include set-font($fs-semi-large, $fw-bold);
+        color: $txt-title-secondary;
+      }
+
+      h2 {
+        @include set-font($fs-regular, $fw-semi-bold);
+        color: $txt-title-secondary;
+      }
+    }
+
+    &-author__testimonial {
+      color: $txt-title-secondary;
+      @include set-font($fs-regular, $fw-semi-bold);
     }
   }
 }

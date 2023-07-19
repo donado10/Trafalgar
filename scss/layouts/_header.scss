@@ -4,6 +4,13 @@
   justify-content: space-between;
   width: $section-width;
 
+  &-menu {
+    display: none;
+  }
+  &-nav__close {
+    display: none;
+  }
+
   &-logo {
     display: flex;
     align-items: center;
@@ -22,5 +29,73 @@
     display: flex;
     align-items: center;
     gap: 4rem;
+  }
+
+  // ==========================================================================
+  // =========          Typography         ==========
+  // ==========================================================================
+  &-logo__logo {
+    @include set-font($fs-semi-large, $fw-very-bold);
+    color: $color3;
+  }
+
+  &-logo__text {
+    @include set-font($fs-semi-large, $fw-very-bold);
+    color: $txt-logo-primary;
+  }
+
+  // ==========================================================================
+  // =========          Media queries         ==========
+  // ==========================================================================
+
+  @include response(xl) {
+    &-nav {
+      position: fixed;
+
+      flex-direction: column;
+      background: $background-nav;
+      opacity: 0.7;
+      z-index: 3;
+      gap: 0rem;
+      top: -150%;
+      left: 0%;
+      width: 100%;
+      transition: all 0.5s ease-out;
+
+      &__link {
+        padding: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__link:not(:nth-child(1)) {
+        border-top: 1px solid white;
+      }
+
+      &__close {
+        display: block;
+        width: 100%;
+        padding: 2rem;
+
+        border-top: 1px solid white;
+        @include flexcentered;
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    &-nav.open-nav {
+      top: 0%;
+    }
+
+    &-menu {
+      display: block;
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
   }
 }

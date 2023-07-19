@@ -1,0 +1,58 @@
+.hero {
+  &-image {
+    img {
+      width: 100%;
+      aspect-ratio: 1.15/1;
+    }
+  }
+}
+
+.providers {
+  &-image {
+    width: fit-content;
+    height: fit-content;
+    @include center-element;
+    img {
+      width: max(100%, 16rem);
+      aspect-ratio: 1.3/1;
+    }
+  }
+}
+
+.app {
+  &-image {
+    width: fit-content;
+    height: fit-content;
+    @include center-element;
+    img {
+      width: max(100%, 16rem);
+      aspect-ratio: 1.5/1;
+    }
+  }
+}
+
+.testimonials-author__picture {
+  width: 8rem;
+  height: 8rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.articles-cards__card-image {
+  height: 15rem;
+}
+
+@include response(lg) {
+  .providers {
+    &-image {
+      display: none;
+    }
+  }
+  .app {
+    &-image {
+      display: none;
+    }
+  }
+}

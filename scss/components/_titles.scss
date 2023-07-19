@@ -1,0 +1,88 @@
+.section-title {
+  position: relative;
+}
+
+.section-title__lefted::after {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  inset: 0;
+  bottom: -30%;
+}
+.section-title__centered::after {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  inset: 0;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ==========================================================================
+// =========          Typography         ==========
+// ==========================================================================
+
+.section-title {
+  @include set-font($fs-big, $fw-very-bold);
+}
+
+.section-title__primary {
+  color: $txt-title-primary;
+}
+.section-title__secondary {
+  color: $txt-title-secondary;
+}
+
+.section-title__primary.section-title__centered::after,
+.section-title__primary.section-title__lefted::after {
+  border-bottom: 3px solid $txt-title-primary;
+}
+.section-title__secondary.section-title__centered::after,
+.section-title__secondary.section-title__lefted::after {
+  border-bottom: 3px solid $txt-title-secondary;
+}
+
+.card-title {
+  color: $txt-title-primary;
+  @include set-font($fs-large, $fw-very-bold);
+}
+
+.link-list__title {
+  color: $txt-title-secondary;
+  @include set-font($fs-semi-large, $fw-bold);
+}
+
+// ==========================================================================
+// =========          Media queries        ==========
+// ==========================================================================
+
+@include response(xxl) {
+  $fs-big: 2rem;
+
+  .section-title {
+    @include set-font($fs-big, $fw-very-bold);
+  }
+}
+@include response(xl) {
+  $fs-big: 1.5rem;
+
+  .section-title {
+    @include set-font($fs-big, $fw-very-bold);
+  }
+}
+
+@include response(lg) {
+  .section-title {
+    @include remove-lineBreak;
+  }
+  .section-title__lefted::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card-title {
+    $fs-large: 1.3rem;
+    @include set-font($fs-large, $fw-very-bold);
+  }
+}
